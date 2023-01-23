@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import style from "../styles/index.module.css";
 import { useRouter } from "next/router";
+import { Head } from "next/head";
 
 export default function Index() {
   const router = useRouter();
@@ -13,6 +14,10 @@ export default function Index() {
   }, [])
 
   return (
+    <>
+    <Head>
+      <title>Promptpay {id}</title>
+    </Head>
     <div className="container">
       <div className={style.container}>
         <h1>Promptpay generator</h1>
@@ -31,5 +36,6 @@ export default function Index() {
                disabled/>
       </div>
     </div>
+    </>
   );
 }
