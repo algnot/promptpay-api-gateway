@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import style from "../styles/index.module.css";
 import { useRouter } from "next/router";
 
-export default function index() {
+export default function Index() {
   const router = useRouter();
   const { id } = router.query;
   const [amount, setAmount] = useState(0);
