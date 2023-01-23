@@ -28,7 +28,6 @@ export default function Index() {
         </div>
         <div className={style.bold}>Promptpay id : {id}</div>
         <input className={style.copy} value={`${href}/${amount}`} 
-               ref={textAreaRef}
                disabled/>
       </div>
     </div>
