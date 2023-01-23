@@ -28,6 +28,7 @@
 }
 
 .card img{
+  width: 100%;
   border-radius: 20px;
 }
 
@@ -53,11 +54,4 @@
 
 .copy{
   cursor: pointer;
-}
-
-@media screen and (max-width: 650px) {
-  .card{
-    width: 350px;
-    height: 350px;
-  }
 }
