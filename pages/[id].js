@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import style from "../styles/index.module.css";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 export default function Index() {
   const router = useRouter();
@@ -16,24 +17,43 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>Promptpay {id}</title>
+        <title>Promptpay Generator</title>
       </Head>
       <div className="container">
+
         <div className={style.container}>
-          <h1>Promptpay generator</h1>
-          <input
-            value={amount}
-            type="number"
-            min={0}
-            placeholder="Your amount"
-            onChange={(e) => setAmount(e.target.value)}
-          />
+          <div className={style.qrPayment}>
+            <img src="/thai-qr-payment.png" height={80} />
+          </div>
           <div className={style.card}>
             <img src={`/api/?id=${id}&amount=${amount}`} />
           </div>
-          <div className={style.bold}>Promptpay id : {id}</div>
-          <input className={style.copy} value={`${href}/${amount}`} disabled />
+          <div className={style.desCon}>
+            <div className={style.desAmount}>
+              Amount
+            </div>
+            <input
+              value={amount}
+              type="number"
+              min={0}
+              className={style.input}
+              placeholder="Your amount"
+              onChange={(e) => setAmount(e.target.value)}
+            />
+            <div className={style.desAmount}>
+              Baht
+            </div>
+          </div>   
+          <div className={style.desCon} style={{marginBottom: '20px'}}>
+            <div className={style.desAmount}>
+              Promptpay ID: {id}
+            </div>
+          </div> 
         </div>
+        <CopyToClipboard text={`${href}/${amount}`}
+                         onCopy={() => alert("Copied!")}>
+          <div className={style.link}>Copy link</div>
+        </CopyToClipboard>
       </div>
     </>
   );

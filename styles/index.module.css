@@ -1,57 +1,52 @@
 .container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: #ffffff;
 }
 
-.container h1{
-  color: #8698C2;
-  margin: 5px 0;
-  margin-top: 20px;
-}
-
-.container h2{
-  margin: 5px 0;
-}
-
-.card{
-  width: 100%;
+.qrPayment{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #6887c5;
-  padding: 25px;
-  border-radius: 20px;
-  margin-top: 30px;
+  background-color: #113566;
 }
 
-.card img{
-  width: 80%;
-  border-radius: 20px;
+.desCon{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 40px;
 }
 
-.container input{
-  width: 100%;
-  background: transparent;
-  padding: 10px;
+.desAmount{
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.input{
   border: none;
-  margin-top: 20px;
   outline: none;
   font-size: 20px;
-  border-bottom: 2px solid #8698C2;
-  color: #8698C2;
   font-weight: bold;
+  width: 50%;
+  color: #000;
+}
+
+.link{
+  cursor: pointer;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #113566;
   text-align: center;
 }
 
-.bold{
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: 20px;
-}
-
-.copy{
-  cursor: pointer;
+.link:hover{
+  background-color: #fff;
+  color: #113566;
+  border: 1px solid #113566;
 }

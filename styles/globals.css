@@ -8,12 +8,12 @@ body {
 
 .container{
   width: 500px;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 @media screen and (max-width: 650px) {
   .container{
-    width: 80vw;
+    width: 90vw;
   }
 }
   
