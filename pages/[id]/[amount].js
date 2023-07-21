@@ -44,7 +44,7 @@ export default function Index() {
             <div className={style.desAmount}>Promptpay ID: {id}</div>
           </div>
         </div>
-        <CopyToClipboard text={`${href}/${amount}`}
+        <CopyToClipboard text={`${href}`}
                          onCopy={() => alert("Copied!")}>
           <div className={style.link}>Copy link</div>
         </CopyToClipboard>
