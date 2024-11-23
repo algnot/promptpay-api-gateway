@@ -23,10 +23,10 @@ export default function Index() {
 
         <div className={style.container}>
           <div className={style.qrPayment}>
-            <img src="/thai-qr-payment.png" height={80} />
+            <img src="/thai-qr-payment.png" height={80} alt="thai-qr-payment" />
           </div>
           <div className={style.card}>
-            <img src={`/api/?id=${id}&amount=${amount}`} width="100%" />
+            <img src={`/api/?id=${id}&amount=${amount}`} width="100%" alt={`${id}-${amount}`} />
           </div>
           <div className={style.desCon}>
             <div className={style.desAmount}>

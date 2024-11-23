@@ -1,6 +1,6 @@
 import generatePayload from 'promptpay-qr' 
 import qrcode from 'qrcode'
-import sharp from 'sharp'
+import svg2png from 'svg2png';
 
 const getSvg = async (payload,dark,light) => {
     return new Promise((resolve, reject) => {
@@ -19,9 +19,7 @@ const getPayload = async (phone, amount) => {
 
 const convertSvgToPng = async (svgData) => {
     try {
-        const pngBuffer = await sharp(Buffer.from(svgData)).resize(800).png({
-            compressionLevel: 0
-        }).toBuffer();
+        const pngBuffer = await svg2png(svgData, { width: 300, height: 300 })
         return pngBuffer
     } catch (err) {
         console.error("Error converting SVG to PNG:", err);
