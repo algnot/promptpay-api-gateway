@@ -14,7 +14,7 @@ export default async function handler(req, res) {
       svg = await generateQrCode(id, parseFloat(amount), dark, light);
 
     res.statusCode = 200;
-    res.setHeader("Content-Type", "image/svg+xml");
+    res.setHeader("Content-Type", "image/png");
     res.setHeader(
       "Cache-Control",
       "public, immutable, no-transform, s-maxage=31536000, max-age=31536000"

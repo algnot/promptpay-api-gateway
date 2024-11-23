@@ -26,7 +26,7 @@ export default function Index() {
             <img src="/thai-qr-payment.png" height={80} />
           </div>
           <div className={style.card}>
-            <img src={`/api/?id=${id}&amount=${amount}`} />
+            <img src={`/api/?id=${id}&amount=${amount}`} width="100%" />
           </div>
           <div className={style.desCon}>
             <div className={style.desAmount}>

@@ -3,6 +3,7 @@ import style from "../../styles/index.module.css";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Image from "next/image";
 
 export default function Index() {
   const router = useRouter();
@@ -21,10 +22,10 @@ export default function Index() {
       <div className="container">
         <div className={style.container}>
           <div className={style.qrPayment}>
-            <img src="/thai-qr-payment.png" height={80} />
+            <Image src="/thai-qr-payment.png" height={80} alt="thai-qr-payment" />
           </div>
           <div className={style.card}>
-            <img src={`/api/?id=${id}&amount=${amount}`} />
+            <Image src={`/api/?id=${id}&amount=${amount}`} width="100%" alt={`${id}-${amount}`} />
           </div>
           {amount > 0 && (
             <div className={style.desCon}>
